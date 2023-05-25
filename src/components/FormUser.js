@@ -59,8 +59,8 @@ function FormUser(props) {
 
       <Form.Group className="mb-3">
         <Form.Label className='text-white'>Usuário:</Form.Label>
-        <Form.Control placeholder="Informe login" {...register("login", { required: true })} required />
-        {errors.login && <span className='text-danger'>Informe o login</span>}
+        <Form.Control placeholder="Informe usuário" {...register("userName", { required: true })} required />
+        {errors.userName && <span className='text-danger'>Informe o usuário</span>}
       </Form.Group>
 
       <Form.Group className="mb-3">

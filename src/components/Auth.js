@@ -36,12 +36,12 @@ function Auth() {
                 <Col></Col>
                 <Col className='border pb-3'>
                     <h3 className='text-center'>Autenticação</h3>
-                    <h6 id='h6LoginInvalido' className='d-none text-center'>Login e/ou senha inválidos!</h6>
+                    <h6 id='h6LoginInvalido' className='d-none text-center'>Usuário e/ou senha inválidos!</h6>
                     <Form noValidate validated={validated} onSubmit={handleSubmit(onSubmit)} className='border rounded p-3 bg-dark'>
                         <Form.Group className="mb-3">
                             <Form.Label>Usuário:</Form.Label>
-                            <Form.Control placeholder="Informe usuário" {...register("login", { required: true })} required />
-                            {errors.login && <span className='text-danger'>Informe o login</span>}
+                            <Form.Control placeholder="Informe usuário" {...register("userName", { required: true })} required />
+                            {errors.userName && <span className='text-danger'>Informe o usuário</span>}
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Senha:</Form.Label>

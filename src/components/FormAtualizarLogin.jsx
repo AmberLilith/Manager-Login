@@ -19,7 +19,7 @@ function FormAtualizarLogin({loginId, updateListOfLogins, closeModal}) {
 
   const loadValuesFromSelectedLogin = (selectedLogin) =>{
     setValue('id', selectedLogin.id)
-    setValue('login', selectedLogin.login, { shouldValidate: true })
+    setValue('userName', selectedLogin.userName, { shouldValidate: true })
     setValue('password', selectedLogin.password, { shouldValidate: true })
     setValue('site', selectedLogin.site, { shouldValidate: true })
     setValue('observation', selectedLogin.observation, { shouldValidate: true })
@@ -90,8 +90,8 @@ function FormAtualizarLogin({loginId, updateListOfLogins, closeModal}) {
 
       <Form.Group className="mb-3">
         <Form.Label className='text-white'>Usuário:</Form.Label>
-        <Form.Control placeholder="Informe login" {...register("login", { required: true })} required />
-        {errors.login && <span className='text-danger'>Informe o login</span>}
+        <Form.Control placeholder="Informe usuário" {...register("userName", { required: true })} required />
+        {errors.userName && <span className='text-danger'>Informe o usuário</span>}
       </Form.Group>
 
       <Form.Group className="mb-3">

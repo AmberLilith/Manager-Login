@@ -49,37 +49,7 @@ function FormCadastrarLogin({updateListOfLogins, closeModal}) {
     }
   }
 
-  // const registerLogin = (data) =>{
-  //   if (!isExpired) {
-  //     axios.post("http://localhost:8080/logins", data, {
-  //       headers: {
-  //         'Authorization': 'Bearer ' + token
-  //       }
-  //     })
-  //       .then((response) => {
-  //         if (response.status == 201) {
-  //           updateListOfLogins();
-  //           closeModal();
-            
-  //         }
-
-  //         if(response.status == 403){            
-  //         alert("Login expirado!");
-  //         navigate('/');
-  //         }
-
-  //       })
-
-  //       .catch((error) => {
-  //         console.log(error)
-  //       })
-  //   } else {
-
-  //     alert("Login expirado!");
-  //     navigate('/');
-
-  //   }
-  // }
+  
 
 
   const onSubmit = data => {
@@ -94,8 +64,8 @@ function FormCadastrarLogin({updateListOfLogins, closeModal}) {
 
       <Form.Group className="mb-3">
         <Form.Label className='text-white'>Usuário:</Form.Label>
-        <Form.Control placeholder="Informe login" {...register("login", { required: true })} required />
-        {errors.login && <span className='text-danger'>Informe o login</span>}
+        <Form.Control placeholder="Informe usuário" {...register("userName", { required: true })} required />
+        {errors.userName && <span className='text-danger'>Informe o usuário</span>}
       </Form.Group>
 
       <Form.Group className="mb-3">

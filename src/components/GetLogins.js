@@ -63,7 +63,7 @@ function GetLogins(){
               {logins.map((login, key) => {
                   return (
                     <tr key={key}>
-                <td>{login.login}</td>
+                <td>{login.userName}</td>
                 <td>{login.site}</td>
                 <td>
                     <ModalFormLogin
